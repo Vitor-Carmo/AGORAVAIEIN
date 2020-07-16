@@ -72,7 +72,7 @@ class Produto{
         $conexao = Conexao::pegarConexao();
         $stmt = $conexao->prepare("UPDATE tbproduto SET fotoProduto = ?
                                     WHERE idProduto = ?");
-        $stmt->bindParam(1,$produto->NomeFotoProduto);
+        $stmt->bindParam(1,$produto->nomeFotoProduto);
         $stmt->bindParam(2,$produto->idProduto);
         $stmt->execute();
 
@@ -80,26 +80,3 @@ class Produto{
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>
