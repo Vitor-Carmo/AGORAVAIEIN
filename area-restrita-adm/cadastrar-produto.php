@@ -17,8 +17,9 @@ try{
 
     $produto = $produto -> consultarId($produto);
 
-    $extensao = substr(strstr($produto->getNomeFotoProduto(),"."),1);
-    $produto->setNomeFotoProduto("img/Produtos/".$produto->getIdProduto().".",$extensao);
+    $extensao = substr(strstr($produto->getNomeFotoProduto(),".") , 1);
+
+    $produto->setNomeFotoProduto("img/prodLoja/".$produto->getIdProduto().".". $extensao);
 
     $produto->cadastrarFoto($produto);
 
